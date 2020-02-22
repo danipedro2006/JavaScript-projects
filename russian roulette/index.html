@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+</head>
+
+<body>
+  <table border="0" width="350" cellspacing="0" cellpadding="5">
+    <tr>
+      <td><img border="0" src="roulette.png" width="216" height="216"></td>
+      <td>
+        <form name="fire">
+          Load number of bullets (1-5):<br /><input name="bullets" type="text" size=3 value=1><br />
+          <p>
+            <input name="message" type="button" value="Play Roulette!" onClick="tryit()">
+          </p>
+        </form>
+        <script>
+          function tryit() {
+            var rounds = Math.floor(Math.random() * 5)
+            if (rounds <= document.fire.bullets.value - 1)
+              alert("Bang. You\'re dead!")
+            else {
+              document.fire.message.value = "Whew. Got lucky!"
+              setTimeout("document.fire.message.value='Play Roulette'", 500)
+            }
+          }
+        </script>
+        <p align="center">Danisoft - Arad 2019</p>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
