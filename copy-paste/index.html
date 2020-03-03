@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    Source text<br>
+    <textarea name="copyTxt" rows="3" cols="50">Hello World</textarea><br>
+    <button class="moverBtn">Move Text</button>
+    <button class="copyBtn">Copy Text</button><br>
+    <textarea name="finalTxt" rows="3" cols="50"></textarea>
+    <div class="output"></div>
+
+<script>
+  const copyTxt=document.querySelector("textarea[name=copyTxt]")
+  const finalText=document.querySelector("textarea[name=finalTxt]")
+  const moverBtn=document.querySelector(".moverBtn");
+  const copyBtn=document.querySelector(".copyBtn");
+  const output=document.querySelector(".output");
+  moverBtn.addEventListener("click", moveText);
+  function moveText(){
+    let temp=copyTxt.value;
+    finalText.value=temp;
+  }
+  copyBtn.addEventListener("click", copyText);
+  function copyText() {
+    let temp=copyTxt.value;
+    copyToClipboard(temp);
+  }
+function  copyToClipboard(str) {
+    const textarea=document.createElement("textarea");
+    textarea.value=str;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+
+  }
+</script>
+  </body>
+</html>
