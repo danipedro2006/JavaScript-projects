@@ -1,0 +1,40 @@
+#canvas {border-bottom: 1px solid #fff}
+body {
+      margin: 10px;
+      font-family: Helvetica, Arial;
+    }
+    a {
+      color: navy;
+    }
+
+input.gsc-input {
+      border-color: #BCCDF0;
+      font-size: 1.0em;
+      background-image: none !important;
+      padding: 0.5em !important;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      color: #555;
+      box-sizing: border-box;
+      width: 50%;
+      border: 1px solid #fff
+}
+
+input.gsc-input:hover {
+      color: black;
+      border-color: black;
+      border: 1px solid #000
+}
+
+input.render {
+    border-color: #666666;
+    background-color: #CECECE;
+    font-size: 1em;
+    height: auto;
+}
+
+.yui-g{
+background: #eee;
+padding: 10px;
+}
