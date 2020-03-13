@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<button type="button" name="button">Play</button>
+
+    <script>
+      const button=document.querySelector("button");
+      const alarm=new Audio("Alarm_Clock.mp3");
+      button.addEventListener('click', function(){
+        let duration=alarm.duration;
+        let muted=alarm.muted;
+        alarm.play();
+        console.log(duration);
+        console.log(muted);
+        console.log("works");
+
+      })
+    </script>
+  </body>
+</html>
